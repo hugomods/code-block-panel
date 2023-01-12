@@ -1,5 +1,7 @@
 # Hugo Code Block Panel Module
 
+A simple code block panel for Hugo, [preview it online](https://projects.razonyang.com/hugo-mod-code-block-panel/).
+
 ## Features
 
 - Expand toggle.
