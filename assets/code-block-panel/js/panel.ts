@@ -13,6 +13,10 @@ export default class Panel {
     }
 
     init() {
+        if (!params.line_nos) {
+            this.code.classList.add('code-no-ln')
+        }
+
         this.pre = this.code.parentElement as HTMLElement
 
         this.ele = document.createElement('div')
