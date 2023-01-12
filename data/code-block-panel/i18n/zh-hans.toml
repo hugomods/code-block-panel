@@ -1,0 +1,5 @@
+[copied]
+other = "复制成功！"
+
+[copy_failed]
+other = "复制失败！"

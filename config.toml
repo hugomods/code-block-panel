@@ -1,0 +1,11 @@
+[module.hugoVersion]
+extended = true
+
+[[module.imports]]
+path = "github.com/razonyang/hb-snackbar"
+
+[[module.imports]]
+path = "github.com/razonyang/hugo-mod-i18n-js"
+
+[params.code_block_panel]
+max_lines = 10
