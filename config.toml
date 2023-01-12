@@ -10,3 +10,4 @@ path = "github.com/razonyang/hugo-mod-i18n-js"
 [params.code_block_panel]
 line_nos = true
 max_lines = 10
+wrap = false

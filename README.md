@@ -77,3 +77,4 @@ max_lines = 10
 |---|---|---|---
 | `line_nos` | Boolean | `true` | Show/Hide the line numbers by default.
 | `max_lines` | Number | `10` | The max visible lines.
+| `wrap` | Boolean | `false` | When `true`, wrap the code by default.

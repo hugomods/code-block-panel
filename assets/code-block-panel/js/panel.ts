@@ -16,6 +16,9 @@ export default class Panel {
         if (!params.line_nos) {
             this.code.classList.add('code-no-ln')
         }
+        if (params.wrap) {
+            this.code.classList.add('code-wrap')
+        }
 
         this.pre = this.code.parentElement as HTMLElement
 
