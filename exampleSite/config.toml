@@ -18,3 +18,4 @@ path = "github.com/razonyang/hugo-mod-icons/vendors/bootstrap"
 [params.code_block_panel]
 max_lines = 7
 # line_nos = false
+# wrap = true
