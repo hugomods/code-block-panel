@@ -75,4 +75,5 @@ max_lines = 10
 
 | Name | Type | Default | Description
 |---|---|---|---
+| `line_nos` | Boolean | `true` | Show/Hide the line numbers by default.
 | `max_lines` | Number | `10` | The max visible lines.
