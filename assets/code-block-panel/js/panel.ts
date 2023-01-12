@@ -109,7 +109,7 @@ export default class Panel {
 
     private lineNoButton() {
         const btn = this.button('ln', () => {
-            this.toggleClass('code-ln')
+            this.toggleClass('code-no-ln')
         })
         this.ele.appendChild(btn)
     }

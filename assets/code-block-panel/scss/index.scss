@@ -16,7 +16,7 @@
         code {
             word-break: break-all;
 
-            &.code-ln {
+            &.code-no-ln {
                 .ln,
                 > span > span:first-child {
                     display: none;
