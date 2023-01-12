@@ -20,8 +20,8 @@
     padding: 0.75rem 0.5rem; }
     .highlight pre code {
       word-break: break-all; }
-      .highlight pre code.code-ln .ln,
-      .highlight pre code.code-ln > span > span:first-child {
+      .highlight pre code.code-no-ln .ln,
+      .highlight pre code.code-no-ln > span > span:first-child {
         display: none; }
       .highlight pre code.code-wrap {
         white-space: pre-wrap !important; }
