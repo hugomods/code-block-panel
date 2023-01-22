@@ -105,7 +105,10 @@
     maxLines() {
       const lines = this.lines();
       if (params_default.max_lines > 0 && lines.length > params_default.max_lines) {
-        this.pre.style.maxHeight = this.maxHeight = lines[params_default.max_lines - 1].offsetTop + "px";
+        const offsetTop = lines[params_default.max_lines - 1].offsetTop;
+        if (offsetTop > 0) {
+          this.pre.style.maxHeight = this.maxHeight = offsetTop + "px";
+        }
       }
     }
     // Show the code language.
