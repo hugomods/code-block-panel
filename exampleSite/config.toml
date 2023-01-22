@@ -7,9 +7,6 @@ lineNumbersInTable = false
 style = "gruvbox"
 
 [[module.imports]]
-path = "github.com/razonyang/hugo-mod-code-block-panel"
-
-[[module.imports]]
 path = "github.com/razonyang/hugo-mod-icons"
 
 [[module.imports]]
