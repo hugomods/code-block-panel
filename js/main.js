@@ -97,6 +97,7 @@
       this.copyButton();
       this.pre.appendChild(this.wrapper);
     }
+    // Returns the lines of code block.
     lines() {
       return Array.from(this.code.querySelectorAll(":scope > span"));
     }
@@ -107,6 +108,7 @@
         this.pre.style.maxHeight = this.maxHeight = lines[params_default.max_lines - 1].offsetTop + "px";
       }
     }
+    // Show the code language.
     language() {
       const lang = this.code.getAttribute("data-lang");
       if (!lang || lang === "fallback") {
