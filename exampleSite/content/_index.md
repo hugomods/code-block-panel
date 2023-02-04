@@ -1,6 +1,10 @@
 ---
 ---
 
+```bash
+echo "Hello world."
+```
+
 ```go
 package main
 
