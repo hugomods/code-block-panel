@@ -1,0 +1,7 @@
+github.com/hugomods/i18n-js v0.1.0 h1:gJmJVObN8rvtMEwBW/z9Wiitown5ZT91092UaAO+UIE=
+github.com/hugomods/i18n-js v0.1.0/go.mod h1:eJfxjgI2CQsNA1/ReIVvr5127DftUKcbHd2A2SQmDvU=
+github.com/hugomods/icons v0.6.0 h1:G6RU93okhPPRDh/jqcew9gwkcYpSpg0rCBv4S6yUAFw=
+github.com/hugomods/icons/vendors/bootstrap v0.4.0 h1:+2r0aWG/qdsdLBtQ+b5VN7z3Kh/M0/TduF9ZxW0d9Kg=
+github.com/hugomods/icons/vendors/bootstrap v0.4.0/go.mod h1:my/xxEyTvWAym67NVfhWRvdQKrHcscU43neIBXnlbfM=
+github.com/hugomods/snackbar v0.1.1 h1:tw5RFmNL7Wc0YGkoMFAevJIZDCmVFwrMpQ4dPSF3BWQ=
+github.com/hugomods/snackbar v0.1.1/go.mod h1:ykFm0IFibeQPuPAm8Gaa27xJS/bNZcSez4omVSl2gQ0=

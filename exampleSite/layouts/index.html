@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ .Site.Title }}</title>
+
+    {{/* Include the CSS. */}}
+    {{ $css := resources.Get "main.scss" }}
+    {{ $css = $css | toCSS }}
+    <link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+  </head>
+  <body>
+    <h1>{{ .Site.Title }}</h1>
+
+    {{ .Content }}
+
+    {{/* Include the JS. */}}
+    {{ $js := resources.Get "main.ts" | js.Build }}
+    {{ $searchJS := partialCached "code-block-panel/assets/js-resource" . }}
+    {{ $js = slice $js $searchJS | resources.Concat "js/main.js" }}
+    <script src="{{ $js.RelPermalink }}" defer></script>
+  </body>
+</html>

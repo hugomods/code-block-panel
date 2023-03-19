@@ -1,0 +1,17 @@
+{
+  "name": "Hugo Code Block Panel Module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hugomods/code-block-panel.git"
+  },
+  "author": "Razon Yang <razonyang@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/hugomods/code-block-panel/issues"
+  },
+  "homepage": "https://github.com/hugomods/code-block-panel",
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "prettier-plugin-go-template": "^0.0.13"
+  }
+}
