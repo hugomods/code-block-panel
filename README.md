@@ -34,8 +34,8 @@ You'll need import two SCSS files first.
 
 ```scss
 // assets/main.scss
-@import "snackbar/scss/index"; // used to show the result of copying code.
-@import "code-block-panel/scss/index";
+@import "mods/snackbar/scss/index"; // used to show the result of copying code.
+@import "mods/code-block-panel/scss/index";
 ```
 
 > The import paths is relative to the `assets` folder.
