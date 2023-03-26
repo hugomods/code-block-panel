@@ -11,7 +11,7 @@
     pre {
         max-height: 560px;
         overflow: auto;
-        padding: 0.75rem 0.5rem;
+        padding: 1rem 0.5rem;
 
         code {
             word-break: break-all;
@@ -30,19 +30,17 @@
 
         .code-block-lang {
             font-style: italic;
-            font-weight: bold;
-            opacity: 0.5;
             position: absolute;
-            right: 1.25rem;
+            right: 1rem;
             text-transform: uppercase;
-            top: 0.25rem;
+            top: 0;
         }
     }
 }
 
 .code-block-panel-wrapper {
     position: absolute;
-    top: 0.5rem;
+    top: 0.75rem;
     right: 1rem;
 }
 
