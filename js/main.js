@@ -30,7 +30,7 @@
   var snackbar = new Snackbar();
   var js_default = snackbar;
 
-  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/i18n-js@v0.1.0/assets/mods/i18n/translator.ts
+  // ns-hugo:/tmp/hugo_cache/modules/filecache/modules/pkg/mod/github.com/hugomods/i18n-js@v0.2.1/assets/mods/i18n/translator.ts
   var Translator = class {
     constructor(translations, fallback) {
       this.translations = translations;
@@ -45,14 +45,24 @@
     }
     getTranslations() {
       const lang = this.getLang();
-      return lang in this.translations ? this.translations[this.getLang()] : this.translations[this.fallback];
+      return this.translations[lang] ?? this.getFallbackTranslations();
+    }
+    getFallbackTranslations() {
+      return this.translations[this.fallback];
     }
     getFallbackTranslation(key) {
-      return this.translations[this.fallback][key] ?? "";
+      const translations = this.getFallbackTranslations();
+      return translations[key] ?? "";
     }
-    translate(key, ctx) {
+    translate(key, ctx, fallback = "") {
       const translations = this.getTranslations();
+      if (!translations) {
+        return fallback === "" ? key : fallback;
+      }
       const translation = translations[key] ?? this.getFallbackTranslation(key);
+      if (!translation) {
+        return fallback === "" ? key : fallback;
+      }
       if (!ctx) {
         return translation.other;
       }
@@ -143,9 +153,9 @@
         ln.remove();
       });
       navigator.clipboard.writeText(clone.innerText).then(() => {
-        js_default.add(i18n_default.translate("copied"));
+        js_default.add(i18n_default.translate("copied", null, "Copied!"));
       }).catch((err) => {
-        js_default.add(i18n_default.translate("copy_failed"));
+        js_default.add(i18n_default.translate("copy_failed", null, "Copy failed."));
         console.error(err);
       });
     }
