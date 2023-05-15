@@ -93,9 +93,9 @@ export default class Panel {
             ln.remove();
         });
         navigator.clipboard.writeText(clone.innerText).then(() => {
-            snackbar.add(i18n.translate('copied'))
+            snackbar.add(i18n.translate('copied', null, 'Copied!'))
         }).catch((err) => {
-            snackbar.add(i18n.translate('copy_failed'))
+            snackbar.add(i18n.translate('copy_failed', null, 'Copy failed.'))
             console.error(err)
         })
     }
