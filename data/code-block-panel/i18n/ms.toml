@@ -1,0 +1,5 @@
+[copied]
+other = "Salinan berjaya!"
+
+[copy_failed]
+other = "Salinan gagal!"
