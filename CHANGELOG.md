@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/hugomods/code-block-panel/compare/v0.2.0...v0.3.0) (2023-10-21)
+
+
+### Features
+
+* (i18n): create ms.toml ([#20](https://github.com/hugomods/code-block-panel/issues/20)) ([54c983d](https://github.com/hugomods/code-block-panel/commit/54c983db9c1be2714c47045c589fb03d95bdb642))
+
 ## [0.2.0](https://github.com/hugomods/code-block-panel/compare/v0.1.2...v0.2.0) (2023-05-15)
 
 
