@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/hugomods/code-block-panel/compare/v0.3.0...v0.4.0) (2023-11-01)
+
+
+### Features
+
+* **i18n:** add Russian translations ([#22](https://github.com/hugomods/code-block-panel/issues/22)) ([0250115](https://github.com/hugomods/code-block-panel/commit/0250115e0c9b59d7c6189a4196b48e8f6109fa20))
+
 ## [0.3.0](https://github.com/hugomods/code-block-panel/compare/v0.2.0...v0.3.0) (2023-10-21)
 
 
