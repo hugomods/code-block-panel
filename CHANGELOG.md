@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/hugomods/code-block-panel/compare/v0.4.0...v0.5.0) (2023-11-11)
+
+
+### Features
+
+* **i18n:** create pt-br.toml ([#24](https://github.com/hugomods/code-block-panel/issues/24)) ([a02f8f5](https://github.com/hugomods/code-block-panel/commit/a02f8f517feed24273880c9b3dcc977f268d06b6))
+
 ## [0.4.0](https://github.com/hugomods/code-block-panel/compare/v0.3.0...v0.4.0) (2023-11-01)
 
 
