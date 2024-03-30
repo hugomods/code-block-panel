@@ -5,4 +5,4 @@
 [![License](https://img.shields.io/github/license/hugomods/code-block-panel?style=flat-square)](https://github.com/hugomods/code-block-panel/blob/main/LICENSE)
 [![Version](https://img.shields.io/github/v/tag/hugomods/code-block-panel?label=version&style=flat-square)](https://github.com/hugomods/code-block-panel/tags)
 
-A simple code block panel module for Hugo, which includes expand toggle, code copy button, line number toggle and wrap toggle. Please check out the [documentations](https://hugomods.com/en/docs/code-block-panel/) for details.
+A simple code block panel module for Hugo, which includes expand toggle, code copy button, line number toggle and wrap toggle. Please check out the [documentation](https://hugomods.com/en/docs/code-block-panel/) for details.
