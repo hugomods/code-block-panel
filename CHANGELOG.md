@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.6.0](https://github.com/hugomods/code-block-panel/compare/v0.5.0...v0.6.0) (2024-04-23)
+
+
+### Features
+
+* **i18n:** add German translations ([#30](https://github.com/hugomods/code-block-panel/issues/30)) ([b71f08b](https://github.com/hugomods/code-block-panel/commit/b71f08b7c36e088e2e4ac623c1b5224570bb61a2))
+
 ## [0.5.0](https://github.com/hugomods/code-block-panel/compare/v0.4.0...v0.5.0) (2023-11-11)
 
 
