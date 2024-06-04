@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.7.0](https://github.com/hugomods/code-block-panel/compare/v0.6.0...v0.7.0) (2024-06-04)
+
+
+### Features
+
+* allow overriding `max_lines` parameter via `data-max-lines` attribute ([#33](https://github.com/hugomods/code-block-panel/issues/33)) ([9258de6](https://github.com/hugomods/code-block-panel/commit/9258de653dbf9403b176149497f5c64255f57fa0))
+
+
+### Bug Fixes
+
+* correct the max_lines calculation ([9258de6](https://github.com/hugomods/code-block-panel/commit/9258de653dbf9403b176149497f5c64255f57fa0))
+
 ## [0.6.0](https://github.com/hugomods/code-block-panel/compare/v0.5.0...v0.6.0) (2024-04-23)
 
 
