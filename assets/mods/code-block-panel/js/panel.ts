@@ -48,8 +48,9 @@ export default class Panel {
 
     private maxLines() {
         const lines = this.lines()
-        if (params.max_lines > 0 && lines.length > params.max_lines) {
-            const offsetTop = lines[params.max_lines - 1].offsetTop
+        const maxLines = this.code.closest('.highlight')?.getAttribute('data-max-lines') ?? params.max_lines
+        if (maxLines > 0 && lines.length > maxLines) {
+            const offsetTop = lines[maxLines].offsetTop
             if (offsetTop > 0) {
                 this.pre.style.maxHeight = this.maxHeight = offsetTop + 'px'
             }
