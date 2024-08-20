@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.7.1](https://github.com/hugomods/code-block-panel/compare/v0.7.0...v0.7.1) (2024-08-20)
+
+
+### Bug Fixes
+
+* replace Sites.First with Sites.Default ([#36](https://github.com/hugomods/code-block-panel/issues/36)) ([d8471e8](https://github.com/hugomods/code-block-panel/commit/d8471e82295bb245a194601938ac227f6a451e21))
+
 ## [0.7.0](https://github.com/hugomods/code-block-panel/compare/v0.6.0...v0.7.0) (2024-06-04)
 
 
