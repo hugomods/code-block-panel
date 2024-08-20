@@ -23,7 +23,7 @@
 {{- $params := merge $defaults .Site.Params.code_block_panel (dict
   "icons" $icons
   "i18n" $i18n.Values
-  "defaultLang" $sites.First.Language.Lang)
+  "defaultLang" $sites.Default.Language.Lang)
 }}
 {{- $options := dict
   "params" $params
