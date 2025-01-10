@@ -3,6 +3,8 @@ import snackbar from 'mods/snackbar/js/index.ts';
 import i18n from './i18n';
 
 export default class Panel {
+    private highlight: HTMLElement
+
     private pre: HTMLElement
 
     private wrapper: HTMLElement
@@ -21,6 +23,7 @@ export default class Panel {
         }
 
         this.pre = this.code.parentElement as HTMLElement
+        this.highlight = this.pre.parentElement as HTMLElement
 
         this.ele = document.createElement('div')
         this.ele.className = 'code-block-panel'
@@ -30,7 +33,7 @@ export default class Panel {
         this.wrapper.appendChild(this.ele)
 
         this.maxLines()
-        this.language()
+        this.title()
         this.lineNoButton()
         this.wrapButton()
         this.expandButton()
@@ -57,17 +60,14 @@ export default class Panel {
         }
     }
 
-    // Show the code language.
-    private language() {
-        const lang = this.code.getAttribute('data-lang')
-        if (!lang || lang === 'fallback') {
+    // Display the title
+    private title() {
+        const title = this.highlight.getAttribute('title')
+        if (title === null) {
             return
         }
 
-        const e = document.createElement('span')
-        e.className = 'code-block-lang'
-        e.innerText = lang
-        this.pre.appendChild(e)
+        this.code.setAttribute('title', title)
     }
 
     private button(name: string, callback: CallableFunction): HTMLButtonElement {

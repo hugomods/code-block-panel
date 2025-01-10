@@ -26,14 +26,25 @@
             &.code-wrap {
                 white-space: pre-wrap !important;
             }
-        }
 
-        .code-block-lang {
-            font-style: italic;
-            position: absolute;
-            right: 1rem;
-            text-transform: uppercase;
-            top: 0;
+            &::before,
+            &::after {
+                position: absolute;
+                right: .75rem;
+                font-weight: 700;
+            }
+
+            &::before {
+                content: attr(data-lang);
+                top: .25rem;
+                text-transform: uppercase;
+                font-size: 0.75rem;
+            }
+
+            &::after {
+                content: attr(title);
+                bottom: .25rem;
+            }
         }
     }
 }
