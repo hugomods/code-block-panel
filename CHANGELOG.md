@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.8.0](https://github.com/hugomods/code-block-panel/compare/v0.7.1...v0.8.0) (2025-01-10)
+
+
+### Features
+
+* display the title attribute ([#39](https://github.com/hugomods/code-block-panel/issues/39)) ([130b0a6](https://github.com/hugomods/code-block-panel/commit/130b0a62f95e16b627232a65f87fc40148e63cf9)), closes [#38](https://github.com/hugomods/code-block-panel/issues/38)
+
 ## [0.7.1](https://github.com/hugomods/code-block-panel/compare/v0.7.0...v0.7.1) (2024-08-20)
 
 
