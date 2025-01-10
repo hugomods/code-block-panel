@@ -26,12 +26,18 @@
         display: none; }
       .highlight pre code.code-wrap {
         white-space: pre-wrap !important; }
-    .highlight pre .code-block-lang {
-      font-style: italic;
-      position: absolute;
-      right: 1rem;
-      text-transform: uppercase;
-      top: 0; }
+      .highlight pre code::before, .highlight pre code::after {
+        position: absolute;
+        right: .75rem;
+        font-weight: 700; }
+      .highlight pre code::before {
+        content: attr(data-lang);
+        top: .25rem;
+        text-transform: uppercase;
+        font-size: 0.75rem; }
+      .highlight pre code::after {
+        content: attr(title);
+        bottom: .25rem; }
 
 .code-block-panel-wrapper {
   position: absolute;
