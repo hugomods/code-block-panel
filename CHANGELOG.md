@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.9.0](https://github.com/hugomods/code-block-panel/compare/v0.8.0...v0.9.0) (2025-06-24)
+
+
+### Features
+
+* add `data-wrap`, `data-line-nos` and `data-expand` attributes ([#41](https://github.com/hugomods/code-block-panel/issues/41)) ([cf126ac](https://github.com/hugomods/code-block-panel/commit/cf126ace01ef1ce20a7224ff4bf55cd21bd066e1))
+
 ## [0.8.0](https://github.com/hugomods/code-block-panel/compare/v0.7.1...v0.8.0) (2025-01-10)
 
 
