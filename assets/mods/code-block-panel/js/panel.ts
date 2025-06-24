@@ -2,6 +2,10 @@ import { default as params } from '@params';
 import snackbar from 'mods/snackbar/js/index.ts';
 import i18n from './i18n';
 
+const isTrue = (val: string | null): boolean => {
+    return !val && val !== 'false' && val !== '0'
+}
+
 export default class Panel {
     private highlight: HTMLElement
 
@@ -15,17 +19,14 @@ export default class Panel {
     }
 
     init() {
-        const isTrue = (val: boolean | string): boolean => {
-            return !!val && val !== 'false' && val !== '0'
-        }
-
-        if (!isTrue(this.code.closest('.highlight')?.getAttribute('data-line-nos') ?? params.line_nos)) {
+        const highlight = this.code.closest('.highlight')
+        if (!isTrue(highlight?.getAttribute('data-line-nos') ?? params.line_nos)) {
             this.code.classList.add('code-no-ln')
         }
-        if (isTrue(this.code.closest('.highlight')?.getAttribute('data-wrap') ?? params.wrap)) {
+        if (isTrue(highlight?.getAttribute('data-wrap') ?? params.wrap)) {
             this.code.classList.add('code-wrap')
         }
-        if (isTrue(this.code.closest('.highlight')?.getAttribute('data-expand') ?? params.expand)) {
+        if (isTrue(highlight?.getAttribute('data-expand') ?? params.expand)) {
             this.expand()
         }
 
