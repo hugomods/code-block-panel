@@ -15,11 +15,14 @@ export default class Panel {
     }
 
     init() {
-        if (!params.line_nos) {
+        if (!this.toBoolean(this.code.closest('.highlight')?.getAttribute('data-line-nos') ?? params.line_nos)) {
             this.code.classList.add('code-no-ln')
         }
-        if (params.wrap) {
+        if (this.toBoolean(this.code.closest('.highlight')?.getAttribute('data-wrap') ?? params.wrap)) {
             this.code.classList.add('code-wrap')
+        }
+        if (this.toBoolean(this.code.closest('.highlight')?.getAttribute('data-expand') ?? params.expand)) {
+            this.expand()
         }
 
         this.pre = this.code.parentElement as HTMLElement
@@ -34,9 +37,6 @@ export default class Panel {
 
         this.maxLines()
         this.title()
-        this.wrapCheck()
-        this.lineNoCheck()
-        this.expandCheck()
         this.lineNoButton()
         this.wrapButton()
         this.expandButton()
@@ -61,6 +61,10 @@ export default class Panel {
                 this.pre.style.maxHeight = this.maxHeight = offsetTop + 'px'
             }
         }
+    }
+
+    private toBoolean(val: boolean | string) {
+        return val && val !== 'false' && val !== '0'
     }
 
     // Display the title
@@ -111,13 +115,6 @@ export default class Panel {
         this.ele.appendChild(btn)
     }
 
-    private wrapCheck() {
-        const wrap = this.code.closest('.highlight')?.getAttribute('data-wrap') ?? params.wrap
-        if (wrap) {
-            this.code.classList.add('code-wrap')
-        }
-    }
-
     private toggleClass(className: string) {
 
         if (this.code.classList.contains(className)) {
@@ -135,25 +132,11 @@ export default class Panel {
         this.ele.appendChild(btn)
     }
 
-    private lineNoCheck() {
-        const lineNos = this.code.closest('.highlight')?.getAttribute('data-line-nos') ?? params.line_nos
-        if (lineNos) {
-            this.code.classList.add('code-no-ln')
-        }
-    }
-
     private expandButton() {
         const btn = this.button('expand', () => {
             this.expand()
         })
         this.ele.appendChild(btn)
-    }
-
-    private expandCheck() {
-        const expand = this.code.closest('.highlight')?.getAttribute('data-expand') ?? params.expand
-        if (expand) {
-            this.expand()
-        }
     }
 
     private expand() {
