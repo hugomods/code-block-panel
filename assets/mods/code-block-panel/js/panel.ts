@@ -34,6 +34,8 @@ export default class Panel {
 
         this.maxLines()
         this.title()
+        this.wrap()
+        this.lineNo()
         this.lineNoButton()
         this.wrapButton()
         this.expandButton()
@@ -108,6 +110,13 @@ export default class Panel {
         this.ele.appendChild(btn)
     }
 
+    private wrap() {
+        const wrap = this.code.closest('.highlight')?.getAttribute('data-wrap') ?? params.wrap
+        if (wrap) {
+            this.code.classList.add('code-wrap')
+        }
+    }
+
     private toggleClass(className: string) {
 
         if (this.code.classList.contains(className)) {
@@ -123,6 +132,13 @@ export default class Panel {
             this.toggleClass('code-no-ln')
         })
         this.ele.appendChild(btn)
+    }
+
+    private lineNo() {
+        const lineNos = this.code.closest('.highlight')?.getAttribute('data-line-nos') ?? params.line_nos
+        if (lineNos) {
+            this.code.classList.add('code-no-ln')
+        }
     }
 
     private expandButton() {
