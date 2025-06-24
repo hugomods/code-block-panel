@@ -2,8 +2,11 @@ import { default as params } from '@params';
 import snackbar from 'mods/snackbar/js/index.ts';
 import i18n from './i18n';
 
-const isTrue = (val: string | null): boolean => {
-    return !val && val !== 'false' && val !== '0'
+const isTrue = (val: string | boolean): boolean => {
+    if (typeof val === 'boolean') {
+        return val
+    }
+    return val !== '' && val !== 'false' && val !== '0'
 }
 
 export default class Panel {
