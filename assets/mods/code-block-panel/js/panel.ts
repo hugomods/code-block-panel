@@ -34,8 +34,9 @@ export default class Panel {
 
         this.maxLines()
         this.title()
-        this.wrap()
-        this.lineNo()
+        this.wrapCheck()
+        this.lineNoCheck()
+        this.expandCheck()
         this.lineNoButton()
         this.wrapButton()
         this.expandButton()
@@ -49,7 +50,7 @@ export default class Panel {
         return Array.from(this.code.querySelectorAll(':scope > span'))
     }
 
-    private maxHeight
+    private maxHeight: string
 
     private maxLines() {
         const lines = this.lines()
@@ -110,7 +111,7 @@ export default class Panel {
         this.ele.appendChild(btn)
     }
 
-    private wrap() {
+    private wrapCheck() {
         const wrap = this.code.closest('.highlight')?.getAttribute('data-wrap') ?? params.wrap
         if (wrap) {
             this.code.classList.add('code-wrap')
@@ -134,7 +135,7 @@ export default class Panel {
         this.ele.appendChild(btn)
     }
 
-    private lineNo() {
+    private lineNoCheck() {
         const lineNos = this.code.closest('.highlight')?.getAttribute('data-line-nos') ?? params.line_nos
         if (lineNos) {
             this.code.classList.add('code-no-ln')
@@ -146,6 +147,13 @@ export default class Panel {
             this.expand()
         })
         this.ele.appendChild(btn)
+    }
+
+    private expandCheck() {
+        const expand = this.code.closest('.highlight')?.getAttribute('data-expand') ?? params.expand
+        if (expand) {
+            this.expand()
+        }
     }
 
     private expand() {
