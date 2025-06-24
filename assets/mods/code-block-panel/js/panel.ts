@@ -15,13 +15,17 @@ export default class Panel {
     }
 
     init() {
-        if (!this.toBoolean(this.code.closest('.highlight')?.getAttribute('data-line-nos') ?? params.line_nos)) {
+        const isTrue = (val: boolean | string): boolean => {
+            return !!val && val !== 'false' && val !== '0'
+        }
+
+        if (!isTrue(this.code.closest('.highlight')?.getAttribute('data-line-nos') ?? params.line_nos)) {
             this.code.classList.add('code-no-ln')
         }
-        if (this.toBoolean(this.code.closest('.highlight')?.getAttribute('data-wrap') ?? params.wrap)) {
+        if (isTrue(this.code.closest('.highlight')?.getAttribute('data-wrap') ?? params.wrap)) {
             this.code.classList.add('code-wrap')
         }
-        if (this.toBoolean(this.code.closest('.highlight')?.getAttribute('data-expand') ?? params.expand)) {
+        if (isTrue(this.code.closest('.highlight')?.getAttribute('data-expand') ?? params.expand)) {
             this.expand()
         }
 
@@ -61,10 +65,6 @@ export default class Panel {
                 this.pre.style.maxHeight = this.maxHeight = offsetTop + 'px'
             }
         }
-    }
-
-    private toBoolean(val: boolean | string) {
-        return val && val !== 'false' && val !== '0'
     }
 
     // Display the title
